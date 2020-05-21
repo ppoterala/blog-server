@@ -1,0 +1,22 @@
+<div class="footer-post">
+
+    <div class="footer-post-elements"> Tagged with:
+
+        {{ if .Params.tags }}
+   
+     
+        {{ range $i, $t := .Params.tags }}
+            {{ if $i }}  &nbsp; {{ end }}
+            <a href="{{ relLangURL ( printf "tags/%s" ( $t | urlize ) ) }}">#{{ $t }}</a>
+        {{ end }}
+
+
+{{ end }}
+    </div>
+
+    <div class="footer-post-cta-buttton-all_tags">
+    <a class="cta-button-all_tags" href="{{ "/tags/" | relLangURL  }}">View all Posts → </a>
+    
+    </div>
+
+  </div>

@@ -1,0 +1,26 @@
+baseURL = "https://ppoterala.github.io/blog/"
+languageCode = "en-us"
+title = "Personal Blog"
+
+summaryLength = 25
+enableemoji = true
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    pre = "about"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Tags"
+    pre = "tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 3
+
+[taxonomies]
+  tag = "tags"

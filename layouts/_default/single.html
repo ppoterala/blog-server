@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<main>
+<article>
+{{ partial "header-post.html" . }}
+
+  {{ .Content }}
+
+</article>
+  {{ partial "footer-post.html" . }}
+
+
+  {{ partial "about-author.html" . }}
+  
+
+
+</main>
+
+{{ end }}

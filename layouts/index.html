@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<main>
+  <div class="blog-posts">
+    <h2>Blog Posts</h2>
+  </div>
+
+
+  {{ range first 3 (where site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+
+  <article id="article-home">
+    <div class="article-home-wrap">
+      <a class="article-1" href="{{ .RelPermalink }}">
+
+
+        <!-- data i czas  -->
+        {{ partial "articleDataAndTime" . }}
+        <!-- data i czas  -->
+
+        <div>
+          <h3 class="article-home-title"> {{ .Title }}</h3>
+          <p>{{ .Summary | safeHTML | truncate 150 }}</p>
+        </div>
+
+
+        {{ partial "articleTags" . }}
+
+
+
+      </a>
+    </div>
+
+  </article>
+
+
+  {{ end }}
+  <div class="footer-home-cta-buttton-all_tags">
+    <div class="footer-home-cta-buttton-all_tags-wrapper">
+      <a class="cta-button-all_tags" href="{{ "/tags/" | relLangURL  }}">View all Posts → </a>
+    </div>
+  </div>
+</main>
+
+{{ end }}

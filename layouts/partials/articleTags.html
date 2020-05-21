@@ -1,0 +1,14 @@
+<div class="article-tags">
+
+    {{ if .Params.tags }}
+   
+     
+            {{ range $i, $t := .Params.tags }}
+                {{ if $i }}  &nbsp; {{ end }}
+                <a href="{{ relLangURL ( printf "tags/%s" ( $t | urlize ) ) }}">#{{ $t }}</a>
+            {{ end }}
+    
+  
+    {{ end }}
+
+  </div>

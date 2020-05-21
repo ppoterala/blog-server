@@ -1,0 +1,23 @@
+  <header class="site-header">
+    <nav class="site-nav">
+      <div class="nav-logo">
+        <a href="{{ .Site.BaseURL }}" class="logo">
+       
+          Poterała Paweł</a>
+      </div>
+
+     
+      <div class="nav">
+        <ul class="nav-main">
+          {{ range .Site.Menus.main }} 
+          <li class="nav-item">
+          
+    <a href="{{ .URL }}">{{ .Name }}</a>
+ 
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+    </nav>
+  </header>
